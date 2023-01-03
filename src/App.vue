@@ -4,16 +4,16 @@
     <p>Perfekt</p>
     <button @click="showTest">Start</button>
   </div>
-  <Perfekt v-else />
+  <Perfect v-else />
 </template>
 
 <script>
-import Perfekt from './components/Perfekt.vue';
+import Perfect from './components/Perfect.vue';
 
 export default {
   name: 'App',
   components: {
-    Perfekt,
+    Perfect,
   },
   data() {
     return {

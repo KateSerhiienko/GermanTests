@@ -1,23 +1,20 @@
 <template>
   <div>
     <h2>Schreiben Sie Perfekt von</h2>
-    <p>{{ wordInPresent }}:</p>
+    <p>{{ currentWord }}:</p>
     <div>
-      <input type="text" v-model="inputData" @keyup.enter="getResult" />
-      <button @click="getResult" ref="button">OK</button>
+      <input type="text" v-model="inputData" @keyup.enter="checkInputData" />
+      <button @click="checkInputData" ref="button">prüfen</button>
     </div>
-    <p>{{ result }}</p>
+    <p>{{ checkedInputDataMessage }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Perfekt',
+  name: 'Perfect',
   data() {
     return {
-      inputData: '',
-      result: '',
-      wordInPresent: '',
       words: {
         arbeiten: 'gearbeitet',
         lernen: 'gelernt',
@@ -43,42 +40,47 @@ export default {
         besuchen: 'besucht',
         erklären: 'erklärt',
       },
+      inputData: '',
+      checkedInputDataMessage: '',
+      lernedWords: [],
     };
   },
-  mounted() {
-    this.wordInPresent = this.setNewWord();
-  },
   methods: {
-    getResult() {
-      if (this.isTrueAnswer) {
-        this.result = 'Richtig';
+    getRandomNumber(max) {
+      return Math.floor(Math.random() * (max + 1));
+    },
+    checkInputData() {
+      if (this.cleanedInputData === this.words[this.currentWord]) {
+        this.checkedInputDataMessage = 'Richtig';
         this.$refs.button.classList.add('disable');
         setTimeout(() => {
-          this.wordInPresent = this.setNewWord();
+          console.log(this.lernedWords);
+          console.log(this.wasMistake);
           this.inputData = '';
-          this.result = '';
+          this.checkedInputDataMessage = '';
           this.$refs.button.classList.remove('disable');
         }, 2000);
       } else {
-        this.result = 'Falsch';
+        this.checkedInputDataMessage = 'Falsh';
       }
     },
-    setNewWord() {
-      return this.keyWordsArray[
-        this.randomNumber(this.keyWordsArray.length - 1)
-      ];
-    },
-    randomNumber(max) {
-      return Math.floor(Math.random() * max) + 1;
+    moveWordInLerned() {
+      this.lernedWords.push(this.currentWord);
     },
   },
   computed: {
-    keyWordsArray() {
-      return Object.keys(this.words);
+    wordsForLerning() {
+      return Object.keys(this.words).filter(
+        (word) => !this.lernedWords.includes(word)
+      );
     },
-    isTrueAnswer() {
-      let trueAnswer = this.words[this.wordInPresent];
-      return trueAnswer === this.inputData;
+    currentWord() {
+      return this.wordsForLerning[
+        this.getRandomNumber(this.wordsForLerning.length - 1)
+      ];
+    },
+    cleanedInputData() {
+      return this.inputData.trim().toLowerCase();
     },
   },
 };
