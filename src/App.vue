@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Deutschprüfungen</h1>
+  <div v-if="!testIsStarting">
+    <p>Perfekt</p>
+    <button @click="showTest">Start</button>
+  </div>
+  <Perfekt v-else />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Perfekt from './components/Perfekt.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Perfekt,
+  },
+  data() {
+    return {
+      testIsStarting: false,
+    };
+  },
+  methods: {
+    showTest() {
+      this.testIsStarting = !this.testIsStarting;
+    },
+  },
+};
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
