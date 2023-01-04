@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-show="!isTestFinisched">
-      <h2>Schreiben Sie Perfekt von</h2>
+      <h2>{{ task }}</h2>
       <p>{{ currentWord }}:</p>
       <div>
         <input type="text" v-model="inputData" @keyup.enter="checkInputData" />
@@ -14,34 +14,17 @@
 
 <script>
 export default {
-  name: 'Perfect',
+  name: 'Test',
+  props: {
+    task: {
+      type: String,
+    },
+    words: {
+      type: Object,
+    },
+  },
   data() {
     return {
-      words: {
-        arbeiten: 'gearbeitet',
-        lernen: 'gelernt',
-        lieben: 'geliebt',
-        sehen: 'gesehen',
-        schlafen: 'geschlafen',
-        lesen: 'gelesen',
-        schreiben: 'geschrieben',
-        essen: 'gegessen',
-        trinken: 'getrunken',
-        kommen: 'gekommen',
-        gehen: 'gegangen',
-        fahren: 'gefahren',
-        bleiben: 'geblieben',
-        telefonieren: 'telefoniert',
-        studieren: 'studiert',
-        reparieren: 'repariert',
-        anfangen: 'angefangen',
-        anrufen: 'angerufen',
-        einkaufen: 'eingekauft',
-        verlieren: 'verloren',
-        verdienen: 'verdient',
-        besuchen: 'besucht',
-        erklären: 'erklärt',
-      },
       inputData: '',
       resultMessage: '',
       lernedWords: [],

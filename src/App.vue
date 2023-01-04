@@ -1,34 +1,23 @@
 <template>
-  <h1>Deutschprüfungen</h1>
-  <div v-if="!testIsStarting">
-    <p>Perfekt</p>
-    <button @click="showTest">Start</button>
+  <h1><router-link to="/">Deutschprüfungen</router-link></h1>
+  <div id="nav">
+    <router-link to="/perfect">Perfect</router-link> |
+    <router-link to="/personal_pronouns_in_akkusativ"
+      >Personalpronomen im Akkusativ</router-link
+    >
   </div>
-  <Perfect v-else />
+
+  <router-view />
 </template>
 
 <script>
-import Perfect from './components/Perfect.vue';
-
 export default {
   name: 'App',
-  components: {
-    Perfect,
-  },
-  data() {
-    return {
-      testIsStarting: false,
-    };
-  },
-  methods: {
-    showTest() {
-      this.testIsStarting = !this.testIsStarting;
-    },
-  },
+  components: {},
 };
 </script>
 
-<style>
+<style lang="scss">
 body {
   margin: 0;
   padding: 0;
@@ -42,5 +31,23 @@ body {
 
 h1 {
   text-align: center;
+  a {
+    color: #333333;
+    text-decoration: none;
+  }
+}
+
+#nav {
+  padding: 30px;
+  text-align: center;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #333333;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
