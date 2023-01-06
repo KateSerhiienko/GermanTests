@@ -6,6 +6,11 @@
       <div>
         <input type="text" v-model="inputData" @keyup.enter="checkInputData" />
         <button @click="checkInputData" ref="button">prüfen</button>
+        <br />
+        <button v-show="wasMistake" @click="showCorrectAnswer">
+          richtige Antwort
+        </button>
+        <span>{{ correctAnswer }}</span>
       </div>
     </div>
     <p>{{ resultMessage }}</p>
@@ -31,6 +36,7 @@ export default {
       wasMistake: false,
       wordsQueue: [],
       isTestFinisched: false,
+      correctAnswer: '',
     };
   },
   methods: {
@@ -46,6 +52,7 @@ export default {
           this.wasMistake = false;
           this.inputData = '';
           this.resultMessage = '';
+          this.correctAnswer = '';
           this.$refs.button.classList.remove('disable');
           if (this.wordsForLerning.length === 0 && this.wordsQueue.length > 0) {
             this.wordsForLerning.push(...this.wordsQueue);
@@ -59,7 +66,7 @@ export default {
           }
         }, 2000);
       } else {
-        this.resultMessage = 'Falsh';
+        this.resultMessage = 'Falsch';
         this.wasMistake = true;
       }
     },
@@ -68,6 +75,9 @@ export default {
     },
     moveWordInQueue() {
       this.wordsQueue.push(this.currentWord);
+    },
+    showCorrectAnswer() {
+      this.correctAnswer = this.words[this.currentWord];
     },
   },
   computed: {
