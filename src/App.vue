@@ -5,6 +5,10 @@
     <router-link to="/personal_pronouns_in_akkusativ"
       >Personalpronomen im Akkusativ</router-link
     >
+    |
+    <router-link to="/3_person_singular_prasens"
+      >3. Person Singular Präsens</router-link
+    >
   </div>
 
   <router-view />
@@ -27,6 +31,7 @@ body {
 #app {
   color: #333333;
   font-family: 'Open Sans', sans-serif;
+  padding: 10px 20px;
 }
 
 h1 {

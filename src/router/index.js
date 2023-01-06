@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
 const routes = [
-
   {
     path: '/',
     name: 'Home',
@@ -17,6 +16,10 @@ const routes = [
     path: '/personal_pronouns_in_akkusativ',
     name: 'PersonalPronounsInAkkusativ',
     component: () => import('../views/PersonalPronounsInAkkusativ.vue')
+  }, {
+    path: '/3_person_singular_prasens',
+    name: '3PersonSingularPrasens',
+    component: () => import('../views/3PersonSingularPrasens.vue')
   }
 ]
 
