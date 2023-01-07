@@ -17,7 +17,7 @@ export default {
     return {
       testIsStarting: false,
       title: '3. Person Singular Präsens',
-      task: 'Schreiben Sie 3. Person Singular Präsens von',
+      task: 'Schreiben Sie 3. Person Singular Präsens (er ... ) von',
       words: {
         abfahren: 'er fährt ab', // отъезжать
         abgeben: 'er gibt ab', // отдавать

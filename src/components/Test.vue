@@ -14,6 +14,9 @@
       </div>
     </div>
     <p>{{ resultMessage }}</p>
+    <button v-show="isTestFinisched" @click="startTestAgain">
+      wiederholen
+    </button>
   </div>
 </template>
 
@@ -78,6 +81,11 @@ export default {
     },
     showCorrectAnswer() {
       this.correctAnswer = this.words[this.currentWord];
+    },
+    startTestAgain() {
+      this.lernedWords.length = 0;
+      this.isTestFinisched = false;
+      this.resultMessage = '';
     },
   },
   computed: {
