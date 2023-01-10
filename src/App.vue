@@ -1,6 +1,7 @@
 <template>
   <h1><router-link to="/">Deutschprüfungen</router-link></h1>
-  <div id="nav">
+  <h2>Teste:</h2>
+  <div class="nav_list">
     <router-link to="/perfect">Perfect</router-link> |
     <router-link to="/personal_pronouns_in_akkusativ"
       >Personalpronomen im Akkusativ</router-link
@@ -9,6 +10,10 @@
     <router-link to="/3_person_singular_prasens"
       >3. Person Singular Präsens</router-link
     >
+  </div>
+  <h2>Karten:</h2>
+  <div class="nav_list">
+    <router-link to="/verben">Verben</router-link>
   </div>
 
   <router-view />
@@ -42,17 +47,21 @@ h1 {
   }
 }
 
-#nav {
+h2 {
+  text-align: center;
+}
+
+.nav_list {
   padding: 30px;
   text-align: center;
 }
 
-#nav a {
+.nav_list a {
   font-weight: bold;
   color: #333333;
 }
 
-#nav a.router-link-exact-active {
+.nav_list a.router-link-exact-active {
   color: #42b983;
 }
 </style>
