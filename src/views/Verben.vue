@@ -4,10 +4,18 @@
       <h3>{{ currentWord }}</h3>
       <p>{{ currentWordTranslation }}</p>
       <p>{{ currentWordPresent }}</p>
-      <p>{{ currentWordPrfect }}</p>
+      <p>{{ currentWordPerfect }}</p>
     </div>
     <button @click="removeCurrentWordFromWordsForLerning">gelernt</button>
-    <button @click="setNewCurrentWord">unterrichten</button>
+    <button
+      @click="setNewCurrentWord"
+      :class="{ disable: wordsForLerning.length <= 1 }"
+    >
+      unterrichten
+    </button>
+    <div v-show="wordsForLerning.length <= 1">
+      <p>Das ist das lezte Wort.</p>
+    </div>
   </div>
   <div v-else>
     <p>Sie haben alle Wörter gemeistert!</p>
@@ -43,6 +51,7 @@ export default {
       wordsForLerning: [],
       currentWord: '',
       isTestFinisched: false,
+      previousWord: '',
     };
   },
   beforeMount() {
@@ -57,10 +66,15 @@ export default {
       return (this.wordsForLerning = Object.keys(this.words));
     },
     setNewCurrentWord() {
-      return (this.currentWord =
+      let previousWord = this.currentWord ? this.currentWord : '';
+      this.currentWord =
         this.wordsForLerning[
           this.getRandomNumber(this.wordsForLerning.length - 1)
-        ]);
+        ];
+      if (previousWord === this.currentWord && previousWord !== '') {
+        return this.setNewCurrentWord();
+      }
+      return;
     },
     removeCurrentWordFromWordsForLerning() {
       if (this.wordsForLerning.length > 1) {
@@ -70,7 +84,6 @@ export default {
       } else {
         this.isTestFinisched = true;
       }
-      console.log(this.wordsForLerning);
     },
   },
   computed: {
@@ -80,7 +93,7 @@ export default {
     currentWordPresent() {
       return this.words[this.currentWord].dritte_person_singular_praesens;
     },
-    currentWordPrfect() {
+    currentWordPerfect() {
       return this.words[this.currentWord].dritte_person_singular_perfekt;
     },
   },
@@ -94,5 +107,10 @@ export default {
   padding: 20px;
   border: 1px solid #333;
   text-align: center;
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.5;
 }
 </style>
