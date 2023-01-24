@@ -31,7 +31,7 @@ export default {
 .background {
   width: 100%;
   height: 100%;
-  background-image: url(../images/wallpaper-header.jpeg);
+  background-image: url(../images/background-header.jpeg);
   background-position: center;
   background-size: cover;
 

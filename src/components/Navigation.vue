@@ -7,8 +7,8 @@
         >Personalpronomen im Akkusativ</router-link
       >
       |
-      <router-link to="/3_person_singular_prasens"
-        >3. Person Singular Präsens</router-link
+      <router-link to="/third_person_singular_prasent"
+        >Dritte Person Singular Präsens</router-link
       >
     </div>
     <h2>Karten:</h2>
@@ -17,6 +17,31 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      navigation: {
+        Teste: [
+          {
+            name: 'Perfect',
+            path: 'perfect',
+          },
+          {
+            name: 'Personalpronomen im Akkusativ',
+            path: 'personal_pronouns_in_akkusativ',
+          },
+          {
+            name: 'Dritte Person Singular Präsens',
+            path: 'third_person_singular_prasent',
+          },
+        ],
+      },
+    };
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .nav_list {

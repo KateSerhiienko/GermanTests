@@ -8,7 +8,7 @@ import Test from '../components/Test';
 import TestHeader from '../components/TestHeader';
 
 export default {
-  name: '3PersonSingularPrasens',
+  name: 'ThirdPersonSingularPrasent',
   components: {
     Test,
     TestHeader,

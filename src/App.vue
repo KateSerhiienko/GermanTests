@@ -17,17 +17,6 @@ export default {
 </script>
 
 <style lang="scss">
-// 1200 768
-/*
- #99b8b1
- #5c7e77
- #565656
- #080100
- #b6c410
- #f0f0f0
- #a2a2a2
-
-*/
 * {
   margin: 0;
   padding: 0;

@@ -18,9 +18,9 @@ const routes = [
     component: () => import('../views/PersonalPronounsInAkkusativ.vue')
   },
   {
-    path: '/3_person_singular_prasens',
-    name: '3PersonSingularPrasens',
-    component: () => import('../views/3PersonSingularPrasens.vue')
+    path: '/third_person_singular_prasent',
+    name: 'ThirdPersonSingularPrasent',
+    component: () => import('../views/ThirdPersonSingularPrasent.vue')
   },
   {
     path: '/verben',
