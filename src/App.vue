@@ -17,31 +17,13 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 #app {
-  color: #080100;
+  color: project-color('foreground');
   font-family: 'Open Sans', sans-serif;
 }
 
 .main-container {
   max-width: 1500px;
   margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
-  a {
-    color: #333333;
-    text-decoration: none;
-  }
-}
-
-h2 {
-  text-align: center;
 }
 </style>

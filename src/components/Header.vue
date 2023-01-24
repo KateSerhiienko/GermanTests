@@ -4,10 +4,10 @@
       <div class="shadow"></div>
     </div>
     <div class="content">
-      <Navigation></Navigation>
       <h1>
         <router-link to="/">Deutschprüfungen</router-link>
       </h1>
+      <Navigation></Navigation>
     </div>
   </div>
 </template>
@@ -40,7 +40,10 @@ export default {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(#fff, 0) 40%, rgba(#fff, 1));
+    background: linear-gradient(
+      rgba(project-color('background'), 0) 40%,
+      rgba(project-color('background'), 1)
+    );
   }
 }
 
@@ -52,6 +55,10 @@ export default {
 }
 
 h1 {
+  text-align: center;
   font-family: 'Barlow', sans-serif;
+  a {
+    color: project-color('foreground');
+  }
 }
 </style>

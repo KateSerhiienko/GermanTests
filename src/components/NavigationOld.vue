@@ -1,17 +1,15 @@
 <template>
   <ul class="nav">
     <li
-      v-for="(item, navDepartmentName) in navigation"
+      v-for="(navDepartmentList, navDepartmentName) in navigation"
       :key="navDepartmentName"
     >
-      <h2 @click="setActiveDepartment(navDepartmentName)">
-        {{ navDepartmentName }}
-      </h2>
-    </li>
-  </ul>
-  <ul class="nav-department">
-    <li v-for="navItem in navigation[activeDepartment]" :key="navItem.path">
-      <router-link :to="navItem.path">{{ navItem.name }}</router-link>
+      <h2>{{ navDepartmentName }}</h2>
+      <ul class="nav-department">
+        <li v-for="navItem in navDepartmentList" :key="navItem.path">
+          <router-link :to="navItem.path">{{ navItem.name }}</router-link>
+        </li>
+      </ul>
     </li>
   </ul>
 </template>
@@ -21,7 +19,7 @@ export default {
   data() {
     return {
       navigation: {
-        teste: [
+        Teste: [
           {
             name: 'TestsPerfect',
             path: 'perfect',
@@ -35,21 +33,20 @@ export default {
             path: 'third_person_singular_prasent',
           },
         ],
-        karten: [
+        Karten: [
           {
             name: 'CardsVerbs',
             path: 'verben',
           },
         ],
       },
-      activeDepartment: '',
     };
   },
-  methods: {
-    setActiveDepartment(department) {
-      this.activeDepartment = department;
-    },
-  },
+  // beforeMount() {
+  //   for (let i in this.navigation) {
+  //     console.log(i);
+  //   }
+  // },
 };
 </script>
 
@@ -79,7 +76,7 @@ a.router-link-exact-active {
   align-items: center;
   text-align: center;
 
-  li {
+  & li {
     max-width: 200px;
     margin: 0 10px;
   }

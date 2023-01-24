@@ -9,23 +9,23 @@ const routes = [
   },
   {
     path: '/perfect',
-    name: 'Perfect',
-    component: () => import('../views/Perfect.vue')
+    name: 'TestsPerfect',
+    component: () => import('../views/TestsPerfect.vue')
   },
   {
     path: '/personal_pronouns_in_akkusativ',
-    name: 'PersonalPronounsInAkkusativ',
-    component: () => import('../views/PersonalPronounsInAkkusativ.vue')
+    name: 'TestsPersonalPronounsInAkkusativ',
+    component: () => import('../views/TestsPersonalPronounsInAkkusativ.vue')
   },
   {
     path: '/third_person_singular_prasent',
-    name: 'ThirdPersonSingularPrasent',
-    component: () => import('../views/ThirdPersonSingularPrasent.vue')
+    name: 'TestsThirdPersonSingularPrasent',
+    component: () => import('../views/TestsThirdPersonSingularPrasent.vue')
   },
   {
     path: '/verben',
-    name: 'Verben',
-    component: () => import('../views/Verben.vue')
+    name: 'CardsVerbs',
+    component: () => import('../views/CardsVerbs.vue')
   }
 ]
 

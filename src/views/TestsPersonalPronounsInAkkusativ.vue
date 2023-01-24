@@ -8,7 +8,7 @@ import Test from '../components/Test';
 import TestHeader from '../components/TestHeader';
 
 export default {
-  name: 'PersonalPronounsInAkkusativ',
+  name: 'TestsPersonalPronounsInAkkusativ',
   components: {
     Test,
     TestHeader,

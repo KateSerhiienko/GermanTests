@@ -1,0 +1,105 @@
+// scss
+
+$project-color-key: 'base' !default;
+
+$project-colors: (
+  'primary': (
+    'base': #5c7e77,
+    'light': #99b8b1,
+    'dark': #4B5F5B,
+    'lighter': #A2BFB9,
+    'darker': #1E5248
+  ),
+  'accent': (
+    'base': #b6c410,
+    'light': #D6E246,
+    'dark': #8C932E,
+    'lighter': #D9E270,
+    'darker':#767F05,
+  ),
+  'secondary': (
+    'base': #C98C89,
+    'light': #E4B0AE,
+    'dark': #977573,
+    'lighter': #E4BEBC,
+    'darker':#83312D,
+  ),
+  'foreground': (
+    'base': #080100,
+    'light': #565656,
+  ),
+  'background': (
+    'base': #ffffff,
+    'dark': #f0f0f0,
+    'darker': #a2a2a2
+  )
+);
+
+$project-opacity: (
+  'light': 0.8, // opacity used with lighter colors
+  'dark': 0.4,  // opacity used with darker colors
+  // ... etc.
+);
+
+@function project-color(
+  $name: 'primary',
+  $variant: $project-color-key,
+  $opacity: 1
+) {
+  $color: null;
+
+  // Get the color spectrum
+  $color-spectrum: map-get($project-colors, $name);
+
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  // Get the alpha setting
+  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($project-opacity, $opacity));
+
+  // Set the alpha of the color
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+
+  @return $color;
+}
+
+// Example usage
+.project-button {
+  background-color: project-color('primary');
+
+  &:hover {
+    background-color: project-color('primary', 'light');
+  }
+
+  &.secondary {
+    background-color: project-color('secondary');
+
+    &:hover {
+      background-color: project-color('secondary', 'dark');
+    }
+  }
+
+  &.transparent {
+    background-color: project-color('primary', $opacity: 'light');
+  }
+}
+
+// styles
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
