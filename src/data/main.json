@@ -1,0 +1,216 @@
+{
+  "verben": {
+    "abfahren": {
+      "translation": "отъезжать в какое-то время",
+      "third_person_singular_prasent": "fährt ab",
+      "third_person_singular_perfect": "ist abgefahren"
+    },
+    "abgeben": {
+      "translation": "отдавать",
+      "third_person_singular_prasent": "gibt ab",
+      "third_person_singular_perfect": "hat abgegeben"
+    },
+    "abholen": {
+      "translation": "забирать",
+      "third_person_singular_prasent": "holt ab",
+      "third_person_singular_perfect": "hat abgeholt"
+    },
+    "ablegen": {
+      "third_person_singular_prasent": "legt ab"
+    },
+    "ablehnen": {
+      "third_person_singular_prasent": "lehnt ab"
+    },
+    "ablesen": {
+      "third_person_singular_prasent": "liest ab"
+    },
+    "abmelden": {
+      "third_person_singular_prasent": "meldet ab"
+    },
+    "abschließen": {
+      "third_person_singular_prasent": "schließt ab"
+    },
+    "abstellen": {
+      "third_person_singular_prasent": "stellen ab"
+    },
+    "anbieten": {
+      "third_person_singular_prasent": "bietet an"
+    },
+    "anklicken": {
+      "third_person_singular_prasent": "klickt an"
+    },
+    "ankommen": {
+      "third_person_singular_prasent": "kommt an"
+    },
+    "ankreuzen": {
+      "third_person_singular_prasent": "kreuzt an"
+    },
+    "aufrufen": {
+      "third_person_singular_prasent": "ruft auf"
+    },
+    "aufschließen": {
+      "third_person_singular_prasent": "scliesßt auf"
+    },
+    "ausblenden": {
+      "third_person_singular_prasent": "blendet aus"
+    },
+    "ausfallen": {
+      "third_person_singular_prasent": "fällt aus"
+    },
+    "ausführen": {
+      "third_person_singular_prasent": "führt aus"
+    },
+    "ausgeben": {
+      "third_person_singular_prasent": "gibt aus"
+    },
+    "aussehen": {
+      "third_person_singular_prasent": "sieht aus"
+    },
+    "aussteigen": {
+      "third_person_singular_prasent": "steigt aus"
+    },
+    "aussuchen": {
+      "third_person_singular_prasent": "sucht aus"
+    },
+    "ausziehen": {
+      "third_person_singular_prasent": "zieht aus"
+    },
+    "beachten": {
+      "third_person_singular_prasent": "beachtet"
+    },
+    "beantragen": {
+      "third_person_singular_prasent": "beantragt"
+    },
+    "bearbeiten": {
+      "third_person_singular_prasent": "bearbeitet"
+    },
+    "sich bedanken": {
+      "third_person_singular_prasent": "bedankt sich"
+    },
+    "bedeutet": {
+      "third_person_singular_prasent": "bedeutet"
+    },
+    "bedienen": {
+      "third_person_singular_prasent": "bedient"
+    },
+    "sich beeilen": {
+      "third_person_singular_prasent": "erbeeilt sich"
+    },
+    "beenden": {
+      "third_person_singular_prasent": "beendet"
+    },
+    "begründen": {
+      "third_person_singular_prasent": "begründet"
+    },
+    "beraten": {
+      "third_person_singular_prasent": "berät"
+    },
+    "besichtigen": {
+      "third_person_singular_prasent": "besichtigt"
+    },
+    "bestellen": {
+      "third_person_singular_prasent": "bestellt"
+    },
+    "bitten": {
+      "third_person_singular_prasent": "bittet"
+    },
+    "buchen": {
+      "third_person_singular_prasent": "bucht"
+    },
+    "arbeiten": {
+      "third_person_singular_perfect": "hat gearbeitet"
+    },
+    "lernen": {
+      "third_person_singular_perfect": "hat gelernt"
+    },
+    "lieben": {
+      "third_person_singular_perfect": "hat geliebt"
+    },
+    "sehen": {
+      "third_person_singular_perfect": "hat gesehen"
+    },
+    "schlafen": {
+      "third_person_singular_perfect": "hat geschlafen"
+    },
+    "lesen": {
+      "third_person_singular_perfect": "hat gelesen"
+    },
+    "schreiben": {
+      "third_person_singular_perfect": "hat geschrieben"
+    },
+    "essen": {
+      "third_person_singular_perfect": "hat gegessen"
+    },
+    "trinken": {
+      "third_person_singular_perfect": "hat getrunken"
+    },
+    "kommen": {
+      "third_person_singular_perfect": "ist gekommen"
+    },
+    "gehen": {
+      "third_person_singular_perfect": "hat gegangen"
+    },
+    "fahren": {
+      "third_person_singular_perfect": "ist gefahren"
+    },
+    "bleiben": {
+      "third_person_singular_perfect": "hat geblieben"
+    },
+    "telefonieren": {
+      "third_person_singular_perfect": "hat telefoniert"
+    },
+    "studieren": {
+      "third_person_singular_perfect": "hat studiert"
+    },
+    "reparieren": {
+      "third_person_singular_perfect": "hat repariert"
+    },
+    "anfangen": {
+      "third_person_singular_perfect": "hat angefangen"
+    },
+    "anrufen": {
+      "third_person_singular_perfect": "hat angerufen"
+    },
+    "einkaufen": {
+      "third_person_singular_perfect": "hat eingekauft"
+    },
+    "verlieren": {
+      "third_person_singular_perfect": "hat verloren"
+    },
+    "verdienen": {
+      "third_person_singular_perfect": "hat verdient"
+    },
+    "besuchen": {
+      "third_person_singular_perfect": "hat besucht"
+    },
+    "erklären": {
+      "third_person_singular_perfect": "hat erklärt"
+    }
+  },
+  "pronouns": {
+    "ich": {
+      "personal_pronouns_accusative": "mich"
+    },
+    "du": {
+      "personal_pronouns_accusative": "dich"
+    },
+    "er": {
+      "personal_pronouns_accusative": "ihn"
+    },
+    "sie": {
+      "personal_pronouns_accusative": "sie"
+    },
+    "es": {
+      "personal_pronouns_accusative": "es"
+    },
+    "wir": {
+      "personal_pronouns_accusative": "uns"
+    },
+    "ihr": {
+      "personal_pronouns_accusative": "euch"
+    },
+    "Sie": {
+      "personal_pronouns_accusative": "Sie"
+    }
+  }
+}

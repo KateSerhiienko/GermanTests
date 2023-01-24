@@ -8,25 +8,15 @@ const routes = [
     component: Home
   },
   {
-    path: '/perfect',
-    name: 'TestsPerfect',
-    component: () => import('../views/TestsPerfect.vue')
+    path: '/tests',
+    name: 'TestPage',
+    component: () => import('../views/TestPage.vue')
   },
   {
-    path: '/personal_pronouns_in_akkusativ',
-    name: 'TestsPersonalPronounsInAkkusativ',
-    component: () => import('../views/TestsPersonalPronounsInAkkusativ.vue')
+    path: '/cards',
+    name: 'CardsPage',
+    component: () => import('../views/CardsPage.vue')
   },
-  {
-    path: '/third_person_singular_prasent',
-    name: 'TestsThirdPersonSingularPrasent',
-    component: () => import('../views/TestsThirdPersonSingularPrasent.vue')
-  },
-  {
-    path: '/verben',
-    name: 'CardsVerbs',
-    component: () => import('../views/CardsVerbs.vue')
-  }
 ]
 
 const router = createRouter({

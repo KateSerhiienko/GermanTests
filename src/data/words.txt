@@ -1,24 +1,4 @@
-<template>
-  <TestHeader v-show="!testIsStarting" :title="title" @showTest="showTest" />
-  <Test v-show="testIsStarting" :task="task" :words="words" />
-</template>
-
-<script>
-import Test from '../components/Test';
-import TestHeader from '../components/TestHeader';
-
-export default {
-  name: 'TestsThirdPersonSingularPrasent',
-  components: {
-    Test,
-    TestHeader,
-  },
-  data() {
-    return {
-      testIsStarting: false,
-      title: '3. Person Singular Präsens',
-      task: 'Schreiben Sie 3. Person Singular Präsens (er ... ) von',
-      words: {
+words: {
         abfahren: 'er fährt ab', // отъезжать
         abgeben: 'er gibt ab', // отдавать
         abholen: 'er holt ab', // забирать
@@ -57,12 +37,3 @@ export default {
         bitten: 'er bittet', // просить
         buchen: 'er bucht', // забронировать
       },
-    };
-  },
-  methods: {
-    showTest() {
-      this.testIsStarting = true;
-    },
-  },
-};
-</script>

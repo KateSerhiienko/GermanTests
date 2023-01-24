@@ -1,56 +1,12 @@
 <template>
-  <ul class="nav">
-    <li
-      v-for="(item, navDepartmentName) in navigation"
-      :key="navDepartmentName"
-    >
-      <h2 @click="setActiveDepartment(navDepartmentName)">
-        {{ navDepartmentName }}
-      </h2>
-    </li>
-  </ul>
-  <ul class="nav-department">
-    <li v-for="navItem in navigation[activeDepartment]" :key="navItem.path">
-      <router-link :to="navItem.path">{{ navItem.name }}</router-link>
-    </li>
+  <ul>
+    <li><router-link to="tests">Testen</router-link></li>
+    <li><router-link to="cards">Karten</router-link></li>
   </ul>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      navigation: {
-        teste: [
-          {
-            name: 'TestsPerfect',
-            path: 'perfect',
-          },
-          {
-            name: 'Personalpronomen im Akkusativ',
-            path: 'personal_pronouns_in_akkusativ',
-          },
-          {
-            name: 'Dritte Person Singular Präsens',
-            path: 'third_person_singular_prasent',
-          },
-        ],
-        karten: [
-          {
-            name: 'CardsVerbs',
-            path: 'verben',
-          },
-        ],
-      },
-      activeDepartment: '',
-    };
-  },
-  methods: {
-    setActiveDepartment(department) {
-      this.activeDepartment = department;
-    },
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -60,28 +16,5 @@ a {
 }
 a.router-link-exact-active {
   color: project-color('primary');
-}
-
-.nav {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-
-  margin-top: 40px;
-  background: project-color('background', $opacity: 0.5);
-
-  /* border: 1px solid project-color('foreground'); */
-}
-
-.nav-department {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-
-  li {
-    max-width: 200px;
-    margin: 0 10px;
-  }
 }
 </style>

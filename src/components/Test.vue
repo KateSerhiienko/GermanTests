@@ -1,7 +1,6 @@
 <template>
   <div>
     <div v-show="!isTestFinisched">
-      <h2>{{ task }}</h2>
       <p>{{ currentWord }}:</p>
       <div>
         <input type="text" v-model="inputData" @keyup.enter="checkInputData" />
@@ -24,9 +23,6 @@
 export default {
   name: 'Test',
   props: {
-    task: {
-      type: String,
-    },
     words: {
       type: Object,
     },
