@@ -2,10 +2,12 @@
   <div v-if="!isTestFinisched">
     <div class="card">
       <h3>{{ currentWord }}</h3>
-      <ul v-for="form in words[currentWord]" :key="form">
-        {{
-          form
-        }}
+      <ul>
+        <li v-for="(form, key) in words[currentWord]" :key="key">
+          <p>
+            <span>{{ formattedKey(key) }}</span> {{ form }}
+          </p>
+        </li>
       </ul>
     </div>
     <button @click="removeCurrentWordFromWordsForLerning">gelernt</button>
@@ -70,6 +72,19 @@ export default {
       } else {
         this.isTestFinisched = true;
       }
+    },
+    formattedKey(key) {
+      switch (key) {
+        case 'translation':
+          return '';
+        case 'third_person_singular_prasent':
+          return 'III P. Sing. Präsens';
+        case 'third_person_singular_perfect':
+          return 'III P. Sing. Perfekt';
+        case 'personal_pronouns_accusative':
+          return 'Akk';
+      }
+      return key;
     },
   },
 };
