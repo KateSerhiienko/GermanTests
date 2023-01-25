@@ -16,106 +16,174 @@
       "third_person_singular_perfect": "hat abgeholt"
     },
     "ablegen": {
-      "third_person_singular_prasent": "legt ab"
+      "translation": "положить куда-то",
+      "third_person_singular_prasent": "legt ab",
+      "third_person_singular_perfect": "hat abgelegt"
     },
     "ablehnen": {
-      "third_person_singular_prasent": "lehnt ab"
+      "translation": "отказать",
+      "third_person_singular_prasent": "lehnt ab",
+      "third_person_singular_perfect": "hat abgelehnt"
     },
     "ablesen": {
-      "third_person_singular_prasent": "liest ab"
+      "translation": "читать, но делать вид что говоришь; считывать",
+      "third_person_singular_prasent": "liest ab",
+      "third_person_singular_perfect": "hat abgelesen"
     },
     "abmelden": {
-      "third_person_singular_prasent": "meldet ab"
+      "translation": "отписаться, сообщить об уходе",
+      "third_person_singular_prasent": "meldet ab",
+      "third_person_singular_perfect": "hat abgemeldet"
     },
     "abschließen": {
-      "third_person_singular_prasent": "schließt ab"
+      "translation": "закончить школу, университет; закрыть дверь",
+      "third_person_singular_prasent": "schließt ab",
+      "third_person_singular_perfect": "hat abgeschlossen"
     },
     "abstellen": {
-      "third_person_singular_prasent": "stellen ab"
+      "translation": "поставить на землю, что-то большое(машина/велосипед), если что-то носишь; выключить",
+      "third_person_singular_prasent": "stellen ab",
+      "third_person_singular_perfect": "hat abgestellt"
     },
     "anbieten": {
-      "third_person_singular_prasent": "bietet an"
+      "translation": "предлагать; угощать",
+      "third_person_singular_prasent": "bietet an",
+      "third_person_singular_perfect": "hat angeboten"
     },
     "anklicken": {
-      "third_person_singular_prasent": "klickt an"
+      "translation": "нажимать",
+      "third_person_singular_prasent": "klickt an",
+      "third_person_singular_perfect": "hat angeklickt"
     },
     "ankommen": {
-      "third_person_singular_prasent": "kommt an"
+      "translation": "прибывать в какое-то время",
+      "third_person_singular_prasent": "kommt an",
+      "third_person_singular_perfect": "ist angekommen"
     },
     "ankreuzen": {
-      "third_person_singular_prasent": "kreuzt an"
+      "translation": "отметиь (например в тесте)",
+      "third_person_singular_prasent": "kreuzt an",
+      "third_person_singular_perfect": "ist angekreuzt"
     },
     "aufrufen": {
-      "third_person_singular_prasent": "ruft auf"
+      "translation": "вызвать; открыть страницу в интернете",
+      "third_person_singular_prasent": "ruft auf",
+      "third_person_singular_perfect": "hat aufgerufen"
     },
     "aufschließen": {
-      "third_person_singular_prasent": "scliesßt auf"
+      "translation": "открыть замок, отпирать",
+      "third_person_singular_prasent": "scliesßt auf",
+      "third_person_singular_perfect": "hat aufgeschlossen"
     },
     "ausblenden": {
-      "third_person_singular_prasent": "blendet aus"
+      "translation": "спрятать (например баннер на сайте), сделать невидимым",
+      "third_person_singular_prasent": "blendet aus",
+      "third_person_singular_perfect": "hat ausgeblendet"
     },
     "ausfallen": {
-      "third_person_singular_prasent": "fällt aus"
+      "translation": "отменяться из-за поломки",
+      "third_person_singular_prasent": "fällt aus",
+      "third_person_singular_perfect": "ist ausgefallen"
     },
     "ausführen": {
-      "third_person_singular_prasent": "führt aus"
+      "translation": "выполнить (программу, спортивное задание, движение, команду)",
+      "third_person_singular_prasent": "führt aus",
+      "third_person_singular_perfect": "hat ausgeführt"
     },
     "ausgeben": {
-      "third_person_singular_prasent": "gibt aus"
+      "translation": "отдавать деньги; заплатить за всех в баре",
+      "third_person_singular_prasent": "gibt aus",
+      "third_person_singular_perfect": "hat ausgegeben"
     },
     "aussehen": {
-      "third_person_singular_prasent": "sieht aus"
+      "translation": "выглядеть",
+      "third_person_singular_prasent": "sieht aus",
+      "third_person_singular_perfect": "hat ausgesehen"
     },
     "aussteigen": {
-      "third_person_singular_prasent": "steigt aus"
+      "translation": "сойти с поезда, вылезти из машины",
+      "third_person_singular_prasent": "steigt aus",
+      "third_person_singular_perfect": "ist ausgestiegen"
     },
     "aussuchen": {
-      "third_person_singular_prasent": "sucht aus"
+      "translation": "выбирать",
+      "third_person_singular_prasent": "sucht aus",
+      "third_person_singular_perfect": "hat ausgesucht"
     },
     "ausziehen": {
-      "third_person_singular_prasent": "zieht aus"
+      "translation": "выехать (с квартиры)",
+      "third_person_singular_prasent": "zieht aus",
+      "third_person_singular_perfect": "ist ausgezogen"
     },
     "beachten": {
-      "third_person_singular_prasent": "beachtet"
+      "translation": "обращать внимание",
+      "third_person_singular_prasent": "beachtet",
+      "third_person_singular_perfect": "hat beachtet"
     },
     "beantragen": {
-      "third_person_singular_prasent": "beantragt"
+      "translation": "подавать заявление",
+      "third_person_singular_prasent": "beantragt",
+      "third_person_singular_perfect": "hat beantragt"
     },
     "bearbeiten": {
-      "third_person_singular_prasent": "bearbeitet"
+      "translation": "поменять, править, редактировать",
+      "third_person_singular_prasent": "bearbeitet",
+      "third_person_singular_perfect": "hat bearbeitet"
     },
     "sich bedanken": {
-      "third_person_singular_prasent": "bedankt sich"
+      "translation": "благодарить",
+      "third_person_singular_prasent": "bedankt sich",
+      "third_person_singular_perfect": "hat sich bedankt"
     },
     "bedeutet": {
-      "third_person_singular_prasent": "bedeutet"
+      "translation": "означать",
+      "third_person_singular_prasent": "es bedeutet",
+      "third_person_singular_perfect": "hat bedeutet"
     },
     "bedienen": {
-      "third_person_singular_prasent": "bedient"
+      "translation": "обслуживать",
+      "third_person_singular_prasent": "bedient",
+      "third_person_singular_perfect": "hat bedient"
     },
     "sich beeilen": {
-      "third_person_singular_prasent": "erbeeilt sich"
+      "translation": "торопиться",
+      "third_person_singular_prasent": "erbeeilt sich",
+      "third_person_singular_perfect": "hat sich beeilt"
     },
     "beenden": {
-      "third_person_singular_prasent": "beendet"
+      "translation": "заканчивать",
+      "third_person_singular_prasent": "beendet",
+      "third_person_singular_perfect": "hat beendet"
     },
     "begründen": {
-      "third_person_singular_prasent": "begründet"
+      "translation": "объяснить, доказать",
+      "third_person_singular_prasent": "begründet",
+      "third_person_singular_perfect": "hat begründet"
     },
     "beraten": {
-      "third_person_singular_prasent": "berät"
+      "translation": "советовать",
+      "third_person_singular_prasent": "berät",
+      "third_person_singular_perfect": "hat beraten"
     },
     "besichtigen": {
-      "third_person_singular_prasent": "besichtigt"
+      "translation": "посещать, осматривать",
+      "third_person_singular_prasent": "besichtigt",
+      "third_person_singular_perfect": "hat besichtigt"
     },
     "bestellen": {
-      "third_person_singular_prasent": "bestellt"
+      "translation": "заказать",
+      "third_person_singular_prasent": "bestellt",
+      "third_person_singular_perfect": "hat bestellt"
     },
     "bitten": {
-      "third_person_singular_prasent": "bittet"
+      "translation": "просить",
+      "third_person_singular_prasent": "bittet",
+      "third_person_singular_perfect": "hat gebeten"
     },
     "buchen": {
-      "third_person_singular_prasent": "bucht"
+      "translation": "забронировать",
+      "third_person_singular_prasent": "bucht",
+      "third_person_singular_perfect": "hat gebucht"
     },
     "arbeiten": {
       "third_person_singular_perfect": "hat gearbeitet"
