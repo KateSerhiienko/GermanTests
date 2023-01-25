@@ -1,15 +1,15 @@
 <template>
-  <ul v-for="test in tests" :key="test.id">
-    <li @click="setActiveTestId(test.id)">{{ test.name }}</li>
+  <ul v-for="exercise in exercises" :key="exercise.id">
+    <li @click="setActiveExerciseId(exercise.id)">{{ exercise.name }}</li>
   </ul>
 </template>
 
 <script>
 export default {
   name: 'ExercisesSelection',
-  emits: { activeTestId: null },
+  emits: { activeExerciseId: null },
   props: {
-    tests: {
+    exercises: {
       type: Object,
     },
   },
@@ -17,8 +17,8 @@ export default {
     return {};
   },
   methods: {
-    setActiveTestId(id) {
-      this.$emit('activeTestId', id);
+    setActiveExerciseId(id) {
+      this.$emit('activeExerciseId', id);
     },
   },
 };

@@ -1,13 +1,30 @@
 <template>
   <div v-if="isEmptyObject(activeCardsSet)">
-    <ExercisesSelection :tests="cardsSets" @activeTestId="beginTest" />
+    <ExercisesSelection
+      :exercises="cardsSets"
+      @activeExerciseId="openCardsSet"
+    />
+  </div>
+  <div v-else>
+    <p>{{ activeCardsSet.name }}</p>
+    <CardsSet :words="wordsOfActiveCardsSet" />
   </div>
 </template>
 
 <script>
+import dataJSON from '../data/main.json';
+import CardsSet from '../components/CardsSet.vue';
+import ExercisesSelection from '../components/ExercisesSelection.vue';
+
 export default {
+  name: 'CardsPage',
+  components: {
+    ExercisesSelection,
+    CardsSet,
+  },
   data() {
     return {
+      dataJSON,
       cardsSets: [
         {
           id: 'cards_verbs',
@@ -26,18 +43,36 @@ export default {
           wordsForms: ['personal_pronouns_accusative'],
         },
       ],
-      // activeCardsSet: {},
+      activeCardsSet: {},
     };
   },
-
+  methods: {
+    isEmptyObject(obj) {
+      return Object.keys(obj).length === 0;
+    },
+    openCardsSet(cardsSetId) {
+      this.activeCardsSet = this.cardsSets.find(
+        (cardsSet) => cardsSet.id === cardsSetId
+      );
+    },
+  },
   computed: {
-    activeCardsSet() {
-      return {
-        id: 'cards_pronouns',
-        name: 'Pronomen',
-        type: 'pronouns',
-        wordsForms: ['personal_pronouns_accusative'],
-      };
+    wordsOfActiveCardsSet() {
+      let words = {};
+      let wordsSortedOfType = dataJSON[this.activeCardsSet.type];
+      let hadWordAllWordsForms;
+
+      for (let key in wordsSortedOfType) {
+        hadWordAllWordsForms =
+          JSON.stringify(Object.keys(wordsSortedOfType[key])) ===
+          JSON.stringify(this.activeCardsSet.wordsForms);
+
+        if (hadWordAllWordsForms) {
+          words[key] = wordsSortedOfType[key];
+        }
+      }
+
+      return words;
     },
   },
 };

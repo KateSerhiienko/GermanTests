@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="!isTestFinisched">
+    <div v-show="!isTrainingFinisched">
       <p>{{ currentWord }}:</p>
       <div>
         <input type="text" v-model="inputData" @keyup.enter="checkInputData" />
@@ -13,7 +13,7 @@
       </div>
     </div>
     <p>{{ resultMessage }}</p>
-    <button v-show="isTestFinisched" @click="startTestAgain">
+    <button v-show="isTrainingFinisched" @click="startTrainingAgain">
       wiederholen
     </button>
   </div>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'Exercise',
+  name: 'Training',
   props: {
     words: {
       type: Object,
@@ -34,7 +34,7 @@ export default {
       lernedWords: [],
       wasMistake: false,
       wordsQueue: [],
-      isTestFinisched: false,
+      isTrainingFinisched: false,
       correctAnswer: '',
     };
   },
@@ -60,7 +60,7 @@ export default {
             this.wordsForLerning.length === 0 &&
             this.wordsQueue.length === 0
           ) {
-            this.isTestFinisched = true;
+            this.isTrainingFinisched = true;
             this.resultMessage = 'Sie haben die Aufgabe erledigt!';
           }
         }, 2000);
@@ -78,9 +78,9 @@ export default {
     showCorrectAnswer() {
       this.correctAnswer = this.words[this.currentWord];
     },
-    startTestAgain() {
+    startTrainingAgain() {
       this.lernedWords.length = 0;
-      this.isTestFinisched = false;
+      this.isTrainingFinisched = false;
       this.resultMessage = '';
     },
   },

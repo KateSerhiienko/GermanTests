@@ -1,31 +1,34 @@
 <template>
-  <div v-if="isEmptyObject(activeTest)">
-    <ExercisesSelection :tests="tests" @activeTestId="beginTest" />
+  <div v-if="isEmptyObject(activeTraining)">
+    <ExercisesSelection
+      :exercises="trainings"
+      @activeExerciseId="beginTraining"
+    />
   </div>
   <div v-else>
     <div>
-      <p>{{ activeTest.name }}</p>
-      <p>{{ activeTest.task }}:</p>
-      <Exercise :words="wordsOfActiveTest" />
+      <p>{{ activeTraining.name }}</p>
+      <p>{{ activeTraining.task }}:</p>
+      <Training :words="wordsOfActiveTraining" />
     </div>
   </div>
 </template>
 
 <script>
 import dataJSON from '../data/main.json';
-import Exercise from '../components/Exercise.vue';
+import Training from '../components/Training.vue';
 import ExercisesSelection from '../components/ExercisesSelection.vue';
 
 export default {
   name: 'TrainingsPage',
   components: {
-    Exercise,
+    Training,
     ExercisesSelection,
   },
   data() {
     return {
       dataJSON,
-      tests: [
+      trainings: [
         {
           id: 'test_personal_pronouns_accusative',
           name: 'Personalpronomen im Akkusativ',
@@ -48,22 +51,24 @@ export default {
           wordsForm: 'third_person_singular_prasent',
         },
       ],
-      activeTest: {},
+      activeTraining: {},
     };
   },
   methods: {
     isEmptyObject(obj) {
       return Object.keys(obj).length === 0;
     },
-    beginTest(testId) {
-      this.activeTest = this.tests.find((test) => test.id === testId);
+    beginTraining(trainingId) {
+      this.activeTraining = this.trainings.find(
+        (training) => training.id === trainingId
+      );
     },
   },
   computed: {
-    wordsOfActiveTest() {
+    wordsOfActiveTraining() {
       let words = {};
-      let wordsSortedOfType = dataJSON[this.activeTest.type];
-      let wordsForm = this.activeTest.wordsForm;
+      let wordsSortedOfType = dataJSON[this.activeTraining.type];
+      let wordsForm = this.activeTraining.wordsForm;
 
       for (let key in wordsSortedOfType) {
         if (wordsSortedOfType[key][wordsForm]) {
