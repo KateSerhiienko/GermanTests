@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'TestSelection',
+  name: 'ExercisesSelection',
   emits: { activeTestId: null },
   props: {
     tests: {

@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <ul v-for="cardSet in cardsSets" :key="cardSet.id"></ul>
-    <li @click="beginTest(test.id)">{{ test.name }}</li>
+  <div v-if="isEmptyObject(activeCardsSet)">
+    <ExercisesSelection :tests="cardsSets" @activeTestId="beginTest" />
   </div>
 </template>
 

@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'Test',
+  name: 'Exercise',
   props: {
     words: {
       type: Object,

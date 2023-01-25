@@ -1,26 +1,26 @@
 <template>
   <div v-if="isEmptyObject(activeTest)">
-    <TestSelection :tests="tests" @activeTestId="beginTest" />
+    <ExercisesSelection :tests="tests" @activeTestId="beginTest" />
   </div>
   <div v-else>
     <div>
       <p>{{ activeTest.name }}</p>
       <p>{{ activeTest.task }}:</p>
-      <Test :words="wordsOfActiveTest" />
+      <Exercise :words="wordsOfActiveTest" />
     </div>
   </div>
 </template>
 
 <script>
 import dataJSON from '../data/main.json';
-import Test from '../components/Test.vue';
-import TestSelection from '../components/TestSelection.vue';
+import Exercise from '../components/Exercise.vue';
+import ExercisesSelection from '../components/ExercisesSelection.vue';
 
 export default {
-  name: 'TestsPage',
+  name: 'TrainingsPage',
   components: {
-    Test,
-    TestSelection,
+    Exercise,
+    ExercisesSelection,
   },
   data() {
     return {

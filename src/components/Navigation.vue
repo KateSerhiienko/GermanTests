@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li><router-link to="tests">Testen</router-link></li>
+    <li><router-link to="trainings">Trainings</router-link></li>
     <li><router-link to="cards">Karten</router-link></li>
   </ul>
 </template>
