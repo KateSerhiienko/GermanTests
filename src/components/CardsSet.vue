@@ -1,8 +1,8 @@
 <template>
   <div v-if="!isTestFinisched">
-    <div class="card">
+    <div class="card" @click="showWordForms">
       <h3>{{ currentWord }}</h3>
-      <ul>
+      <ul class="forms" ref="forms">
         <li v-for="(form, key) in words[currentWord]" :key="key">
           <p>
             <span>{{ formattedKey(key) }}</span> {{ form }}
@@ -86,6 +86,9 @@ export default {
       }
       return key;
     },
+    showWordForms() {
+      this.$refs.forms.classList.toggle('visible');
+    },
   },
 };
 </script>
@@ -102,5 +105,13 @@ export default {
 .disable {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.forms {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 </style>
