@@ -2,6 +2,7 @@
   <ul>
     <li><router-link to="trainings">Trainings</router-link></li>
     <li><router-link to="cards">Karten</router-link></li>
+    <li><router-link to="translations"> Übersetzungen</router-link></li>
   </ul>
 </template>
 

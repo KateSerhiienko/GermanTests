@@ -43,7 +43,9 @@ export default {
       return Math.floor(Math.random() * (max + 1));
     },
     checkInputData() {
-      if (this.cleanedInputData === this.words[this.currentWord]) {
+      if (
+        this.cleanedInputData === this.words[this.currentWord].toLowerCase()
+      ) {
         this.resultMessage = 'Richtig';
         this.$refs.button.classList.add('disable');
         setTimeout(() => {

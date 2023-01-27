@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!isTestFinisched">
+  <div v-if="!isExerciseFinisched">
     <div class="card" @click="showWordForms">
       <h3>{{ currentWord }}</h3>
       <ul class="forms" ref="forms">
@@ -38,7 +38,7 @@ export default {
     return {
       wordsForLerning: [],
       currentWord: '',
-      isTestFinisched: false,
+      isExerciseFinisched: false,
       previousWord: '',
     };
   },
@@ -70,7 +70,7 @@ export default {
         this.wordsForLerning.splice(index, 1);
         this.setNewCurrentWord();
       } else {
-        this.isTestFinisched = true;
+        this.isExerciseFinisched = true;
       }
     },
     formattedKey(key) {
