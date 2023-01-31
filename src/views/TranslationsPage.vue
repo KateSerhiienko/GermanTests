@@ -33,6 +33,12 @@ export default {
           type: 'verbs',
           wordsForm: 'translation',
         },
+        {
+          id: 'translations_pronouns',
+          name: 'Personalpronomen (rus - deu)',
+          type: 'pronouns',
+          wordsForm: 'translation',
+        },
       ],
       activeTranslation: {},
     };

@@ -40,7 +40,7 @@ export default {
           id: 'cards_pronouns',
           name: 'Pronomen',
           type: 'pronouns',
-          wordsForms: ['personal_pronouns_accusative'],
+          wordsForms: ['translation', 'personal_pronoun_accusative'],
         },
       ],
       activeCardsSet: {},

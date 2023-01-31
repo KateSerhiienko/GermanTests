@@ -257,28 +257,40 @@
   },
   "pronouns": {
     "ich": {
-      "personal_pronouns_accusative": "mich"
+      "translation": "я",
+      "personal_pronoun_accusative": "mich"
     },
     "du": {
-      "personal_pronouns_accusative": "dich"
+      "translation": "ты",
+      "personal_pronoun_accusative": "dich"
     },
     "er": {
-      "personal_pronouns_accusative": "ihn"
+      "translation": "он",
+      "personal_pronoun_accusative": "ihn"
     },
     "sie": {
-      "personal_pronouns_accusative": "sie"
+      "translation": "она",
+      "personal_pronoun_accusative": "sie"
     },
     "es": {
-      "personal_pronouns_accusative": "es"
+      "translation": "оно",
+      "personal_pronoun_accusative": "es"
     },
     "wir": {
-      "personal_pronouns_accusative": "uns"
+      "translation": "мы",
+      "personal_pronoun_accusative": "uns"
     },
     "ihr": {
-      "personal_pronouns_accusative": "euch"
+      "translation": "вы",
+      "personal_pronoun_accusative": "euch"
+    },
+    "sie (Pl)": {
+      "translation": "они",
+      "personal_pronoun_accusative": "sie"
     },
     "Sie": {
-      "personal_pronouns_accusative": "Sie"
+      "translation": "Вы",
+      "personal_pronoun_accusative": "Sie"
     }
   }
 }

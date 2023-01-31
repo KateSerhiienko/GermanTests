@@ -81,7 +81,7 @@ export default {
           return 'III P. Sing. Präsens';
         case 'third_person_singular_perfect':
           return 'III P. Sing. Perfekt';
-        case 'personal_pronouns_accusative':
+        case 'personal_pronoun_accusative':
           return 'Akk';
       }
       return key;

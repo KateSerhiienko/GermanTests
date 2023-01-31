@@ -30,11 +30,11 @@ export default {
       dataJSON,
       trainings: [
         {
-          id: 'test_personal_pronouns_accusative',
+          id: 'test_personal_pronoun_accusative',
           name: 'Personalpronomen im Akkusativ',
           task: 'Schreiben Sie Personalpronomen im Akkusativ von',
           type: 'pronouns',
-          wordsForm: 'personal_pronouns_accusative',
+          wordsForm: 'personal_pronoun_accusative',
         },
         {
           id: 'test_third_person_singular_perfect',
