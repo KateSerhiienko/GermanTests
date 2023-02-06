@@ -1,12 +1,12 @@
 <template>
   <div>
     <h3>{{ currentWord }}</h3>
-    <form>
-      <div v-for="answer in wordsForAnswer" :key="answer">
-        <input type="radio" :id="answer" :value="answer" />
+    <form ref="form">
+      <div v-for="answer in wordsForAnswer" :key="answer" class="answer">
+        <input type="radio" :id="answer" :value="answer" v-model="picked" />
         <label :for="answer">{{ answer }}</label>
       </div>
-      <input type="submit" @click.prevent="setNewCurrentWord" />
+      <input type="submit" @click.prevent="checkCurrentAnswer" />
     </form>
   </div>
 </template>
@@ -23,6 +23,8 @@ export default {
     return {
       wordsForLerning: [],
       currentWord: '',
+      picked: '',
+      wasMistake: false,
     };
   },
   beforeMount() {
@@ -47,6 +49,11 @@ export default {
       }
       return;
     },
+    removeWordFromWordsForLerning(word) {
+      let index = this.wordsForLerning.indexOf(word);
+      this.wordsForLerning.splice(index, 1);
+      this.setNewCurrentWord();
+    },
     getNumberOfSimilar(mainWord, word) {
       if (!mainWord.includes('sich') && word.includes('sich')) {
         word = word.replace('sich ', '');
@@ -62,16 +69,34 @@ export default {
       }
       return similars.length;
     },
+    checkCurrentAnswer() {
+      let answers = this.$refs.form.querySelectorAll('.answer');
+
+      if (
+        this.picked === this.words[this.currentWord] &&
+        this.wasMistake === false
+      ) {
+        this.removeWordFromWordsForLerning(this.currentWord);
+        this.setNewCurrentWord();
+      } else if (this.picked === this.words[this.currentWord]) {
+        answers.forEach((el) => {
+          el.classList.remove('wrong');
+        });
+        this.setNewCurrentWord();
+        this.wasMistake = false;
+      } else {
+        this.wasMistake = true;
+        answers.forEach((el) => {
+          if (el.querySelector('input').checked) {
+            el.classList.add('wrong');
+          }
+        });
+      }
+
+      this.picked = '';
+    },
   },
   computed: {
-    // wordsForLerning() {
-    //   return Object.keys(this.words);
-    // },
-    // currentWord() {
-    //   return this.wordsForLerning[
-    //     this.getRandomNumber(this.wordsForLerning.length - 1)
-    //   ];
-    // },
     allWordsArray() {
       return Object.values(this.words);
     },
@@ -128,7 +153,6 @@ export default {
 
           similarsArray.unshift(word);
         }
-        console.log(similarsArray);
       } else {
         similarsArray = [...this.allWordsArray];
         console.log(1);
@@ -157,4 +181,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.wrong {
+  color: red;
+  text-decoration: line-through;
+  pointer-events: none;
+  opacity: 0.5;
+}
+</style>
