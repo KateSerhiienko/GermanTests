@@ -137,7 +137,7 @@ export default {
       } else if (similarsArray1.length + similarsArray2.length > 0) {
         similarsArray = [...similarsArray1, ...similarsArray2];
 
-        let wordsArray = [...this.allWordsArray].filter(
+        let wordsArray = [...words].filter(
           (word) => !similarsArray.includes(word)
         );
 
@@ -154,9 +154,9 @@ export default {
           similarsArray.unshift(word);
         }
       } else {
-        similarsArray = [...this.allWordsArray];
-        console.log(1);
+        similarsArray = [...words];
       }
+
       return similarsArray;
     },
     wordsForAnswer() {
